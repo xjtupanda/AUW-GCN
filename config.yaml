@@ -1,4 +1,4 @@
-dataset: "samm" #"cross" # "cas(me)^3" 
+dataset: "samm" # "cas(me)^2"
 
 cas(me)^2:
   dataset: "cas(me)^2"
@@ -30,7 +30,7 @@ cas(me)^2:
   macro_right_max_dis: 45
 
   project_root: "./"
-  feature_root: "/data/xjtupanda/experiments/Detection/ME_spotting/archive/dataset/12points_orig/features/cas(me)^2/feature"
+  feature_root: ~
   segment_feat_root: "/data/xjtupanda/experiments/Detection/ME_spotting/archive/dataset/12points_orig/features/cas(me)^2/feature_segment"
   model_save_root: ~
   output_dir_name: ~
@@ -102,7 +102,7 @@ samm:
   macro_right_max_dis: 27
 
   project_root: "./"
-  feature_root: "/data/xjtupanda/experiments/Detection/ME_spotting/archive/dataset/12points_orig/features/samm_25/feature_25"
+  feature_root: ~
   segment_feat_root: "/data/xjtupanda/experiments/Detection/ME_spotting/archive/dataset/12points_orig/features/samm_25/feature_segment_25"
   model_save_root: ~
   output_dir_name: ~
