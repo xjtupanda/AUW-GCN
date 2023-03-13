@@ -1,5 +1,9 @@
 # AUW-GCN-for-ME-Spotting
-AU-AWARE GRAPH CONVOLUTIONAL NETWORK FOR MACRO- AND MICRO-EXPRESSION SPOTTING
+PyTorch implementation for the paper "AU-AWARE GRAPH CONVOLUTIONAL NETWORK FOR MACRO- AND MICRO-EXPRESSION SPOTTING" (**ICME 2023**, 
+long paper): [IEEE version]().
+
+> The codes are modified from [USTC_ME_Spotting
+](https://github.com/wenhaocold/USTC_ME_Spotting).
 
 
 ## Prerequisites
@@ -20,7 +24,7 @@ https://pan.baidu.com/s/1TP7axxcj-Hx5g10TYsKpBA)
 with code: gn7i  (link is copied from 
 [USTC_ME_Spotting#features-and-config-file](https://github.com/wenhaocold/USTC_ME_Spotting#features-and-config-file)) and extract it:
 ```shell
-$ tar -xf "path/to/features.tar.gz" -C dir_to_save_feature
+$ tar -xf features.tar.gz -C dir_to_save_feature
 ```
 After downloading the feature files, the variables of feature path, `segment_feat_root`, in [config.yaml](https://github.com/xjtupanda/AUW-GCN/blob/main/config.yaml) should be modified accordingly.
 
@@ -39,3 +43,5 @@ If you feel this project helpful to your research, please cite our work.
 ```
 
 ```
+
+##### Please email me at xjtupanda@mail.ustc.edu.cn if you have any inquiries or issues.
