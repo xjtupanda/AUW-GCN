@@ -30,9 +30,9 @@ After downloading the feature files, the variables of feature path, `segment_fea
 
 3. Training and Inference
 
-Set 'SUB_LIST', 
-'OUTPUT' (dir for saving ckpts, log and results)
-and 'DATASET' (["samm" | "cas(me)^2"])  in [pipeline.sh](https://github.com/xjtupanda/AUW-GCN/blob/main/pipeline.sh), then run:
+Set `SUB_LIST`, 
+`OUTPUT` (dir for saving ckpts, log and results)
+and `DATASET` ( ["samm" | "cas(me)^2"] )  in [pipeline.sh](https://github.com/xjtupanda/AUW-GCN/blob/main/pipeline.sh), then run:
 ```shell
 $ bash pipeline.sh
 ```
