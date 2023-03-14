@@ -22,8 +22,8 @@ $ cd AUW-GCN
 2. Download features
 
 For the features of SAMM-LV and CAS(ME)^2 datasets, please download [features.tar.gz](
-https://pan.baidu.com/s/1TP7axxcj-Hx5g10TYsKpBA) 
-with code: gn7i  (link is copied from 
+https://pan.baidu.com/s/1Pj_CnnypSfNOTaSO1BFKdg?pwd=mpie) 
+(Modified from 
 [USTC_ME_Spotting#features-and-config-file](https://github.com/wenhaocold/USTC_ME_Spotting#features-and-config-file)) and extract it:
 ```shell
 $ tar -xf features.tar.gz -C dir_to_save_feature
