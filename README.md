@@ -7,7 +7,10 @@ long paper): [IEEE version (Coming soon)](),  [arXiv version]().
 > The codes are modified from [USTC_ME_Spotting
 ](https://github.com/wenhaocold/USTC_ME_Spotting).
 
+## Results
+We compare our method against others on two benchmark datasets, i.e., [CAS(ME)<sup>2</sup>](http://fu.psych.ac.cn/CASME/cas(me)2-en.php) and [SAMM-LV](http://www2.docm.mmu.ac.uk/STAFF/M.Yap/dataset.php) in terms of F1-Score:
 
+![model_results](./figures/result.png)
 ## Prerequisites
 - python 3.x with pytorch, numpy, tensorboard, tqdm, yaml
 - cuda, cudnn
