@@ -1,4 +1,4 @@
-dataset: "samm" # "cas(me)^2"
+dataset: "samm" #"cross" # "cas(me)^3" 
 
 cas(me)^2:
   dataset: "cas(me)^2"
@@ -16,21 +16,21 @@ cas(me)^2:
   macro_min: 15
   epoch_begin: 15
   #nms_top_K: 5
-  nms_top_K_micro: 6
-  nms_top_K_macro: 6
+  nms_top_K_micro: 5
+  nms_top_K_macro: 5
 
   micro_left_min_dis: 2   # micro_min // 2
-  micro_left_max_dis: 15
+  micro_left_max_dis: 7
   micro_right_min_dis: 2 
-  micro_right_max_dis: 15
+  micro_right_max_dis: 7
 
   macro_left_min_dis: 7
-  macro_left_max_dis: 45
+  macro_left_max_dis: 29
   macro_right_min_dis: 7  # macro_min // 2
-  macro_right_max_dis: 45
+  macro_right_max_dis: 29
 
   project_root: "./"
-  feature_root: ~
+  feature_root: "/data/xjtupanda/experiments/Detection/ME_spotting/archive/dataset/12points_orig/features/cas(me)^2/feature"
   segment_feat_root: "/data/xjtupanda/experiments/Detection/ME_spotting/archive/dataset/12points_orig/features/cas(me)^2/feature_segment"
   model_save_root: ~
   output_dir_name: ~
@@ -50,8 +50,8 @@ cas(me)^2:
   abfcm_label_smooth: 0.16
   abfcm_best_epoch: 47
 
-  micro_apex_score_threshold: 0.4
-  macro_apex_score_threshold: 0.6
+  micro_apex_score_threshold: 0.5
+  macro_apex_score_threshold: 0.5
 
   epochs: 100
   batch_size: 128
@@ -88,12 +88,12 @@ samm:
   epoch_begin: 10
   # M: 54
   #nms_top_K: 5 # 100
-  nms_top_K_micro: 6
-  nms_top_K_macro: 5
+  nms_top_K_micro: 5
+  nms_top_K_macro: 6
 
-  micro_left_min_dis: 3
+  micro_left_min_dis: 2
   micro_left_max_dis: 7
-  micro_right_min_dis: 3
+  micro_right_min_dis: 2
   micro_right_max_dis: 7
 
   macro_left_min_dis: 6
@@ -102,7 +102,7 @@ samm:
   macro_right_max_dis: 27
 
   project_root: "./"
-  feature_root: ~
+  feature_root: "/data/xjtupanda/experiments/Detection/ME_spotting/archive/dataset/12points_orig/features/samm_25/feature_25"
   segment_feat_root: "/data/xjtupanda/experiments/Detection/ME_spotting/archive/dataset/12points_orig/features/samm_25/feature_segment_25"
   model_save_root: ~
   output_dir_name: ~

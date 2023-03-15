@@ -27,7 +27,7 @@ def calculate_proposal_with_score(opt, array_score_start, array_score_end,
         # EX_MIN = int(opt["micro_min"] // 2)                                           == 2
         apex_score_threshold = opt["micro_apex_score_threshold"]
     elif exp == 1:      # macro-expression
-        return ret # for demo. only display ME
+        #return ret # for demo. only display ME
         # STEP = int(opt["macro_average_len"] // 2)  # int(opt["micro_average_len"]*3/2)
         # EX_MIN = int(opt["macro_min"] // 2)
         left_min_dis = opt['macro_left_min_dis']
@@ -157,9 +157,9 @@ def eval_single_epoch(opt, model, dataloader, epoch, device):
                             "apex_score":float, 
                             "type_idx":int}
             new_df = new_df.astype(convert_dict)
-            # TODO: the score should be a weighted sum
+            
             new_df["score"] = new_df.start_score.values[:] * new_df.end_score.values[:] * new_df.apex_score.values[:]
-            new_df = new_df.groupby('video_name').apply(
+            new_df = new_df.groupby('video_name', group_keys=False).apply(
                 lambda x: x.sort_values("score", ascending=False)).reset_index(drop=True)
 
             csv_dir = os.path.join(
@@ -198,7 +198,7 @@ def nms_single_epoch(opt, epoch):
     )
     
     df = pd.read_csv(predict_file)
-    df = df.groupby(['video_name', "type_idx"]).apply(
+    df = df.groupby(['video_name', "type_idx"], group_keys=False).apply(
             lambda x: nms(x, opt)).reset_index(drop=True)
     
     if os.path.exists(nms_file):
@@ -379,13 +379,13 @@ def calculate_epoch_metrics(opt):
         if not os.path.exists(nms_file):continue
         nms_df = pd.read_csv(nms_file)
         
-        new_df = nms_df.groupby(['video_name', "type_idx"]).apply(
+        new_df = nms_df.groupby(['video_name', "type_idx"], group_keys=False).apply(
             lambda x: iou_for_find(x, opt)).reset_index(drop=True)
-        new_df = new_df.groupby(['video_name', "type_idx"]).apply(
+        new_df = new_df.groupby(['video_name', "type_idx"], group_keys=False).apply(
             lambda x: iou_for_tp(x, opt)).reset_index(drop=True)
         
         
-        res = new_df.groupby(['type_idx']).apply(
+        res = new_df.groupby(['type_idx'], group_keys=False).apply(
             lambda x: calc_metrics(x, opt)).to_dict()
         
         
