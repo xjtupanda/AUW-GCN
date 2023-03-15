@@ -22,7 +22,7 @@ def same_seeds(seed):
     torch.backends.cudnn.deterministic = True  # fix architecture
 
 # for reproduction, same as orig. paper setting
-#same_seeds(1)
+same_seeds(1)
 
 # keep track of statistics
 class AverageMeter(object):
@@ -40,10 +40,10 @@ def train(opt, data_loader, model, optimizer, epoch, device, writer):
     loss_am = AverageMeter()
     
     # define loss function for binary classification
-    # bi_loss_apex = partial(_probability_loss, gamma=opt["abfcm_apex_gamma"], 
-    #                        alpha=opt["abfcm_apex_alpha"], 
-    #                        lb_smooth=opt["abfcm_label_smooth"])
-    bi_loss_apex = nn.MSELoss()
+    bi_loss_apex = partial(_probability_loss, gamma=opt["abfcm_apex_gamma"], 
+                           alpha=opt["abfcm_apex_alpha"], 
+                           lb_smooth=opt["abfcm_label_smooth"])
+    
     bi_loss_action = partial(_probability_loss, 
                              gamma=opt["abfcm_action_gamma"], 
                              alpha=opt["abfcm_action_alpha"], 
@@ -215,4 +215,4 @@ if __name__ == '__main__':
         scheduler.step()
     
     tb_writer.close()
-    print("All done!")
+    print("Finish training!")

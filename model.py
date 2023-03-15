@@ -28,8 +28,6 @@ class GraphConvolution(nn.Module):
         self.reset_parameters()
 
         adj_mat = np.load(mat_path)
-        # add self-connection
-        adj_mat = adj_mat + np.identity(adj_mat.shape[0], dtype=adj_mat.dtype)
         self.register_buffer('adj', torch.from_numpy(adj_mat))
         
     def reset_parameters(self):
@@ -60,7 +58,7 @@ class GraphConvolution(nn.Module):
 class GCN(nn.Module):
     def __init__(self, nfeat, nhid, nout, mat_path, dropout=0.3):
         super(GCN, self).__init__()
-        # two layer GCN, TODO: try single layer & pre-defined adjacency matrix
+        
         self.gc1 = GraphConvolution(nfeat, nhid, mat_path)
         self.bn1 = nn.BatchNorm1d(nhid)
         # self.gc2 = GraphConvolution(nhid, nout, mat_path)
