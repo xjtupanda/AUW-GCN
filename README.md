@@ -1,6 +1,6 @@
 # AUW-GCN-for-ME-Spotting
 PyTorch implementation for the paper "AU-AWARE GRAPH CONVOLUTIONAL NETWORK FOR MACRO- AND MICRO-EXPRESSION SPOTTING" (**ICME 2023**, 
-long paper): [IEEE version]().
+long paper): [IEEE version (Coming soon)](),  [arXiv version]().
 
 ![model_overview](./figures/framework.png)
 
