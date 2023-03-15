@@ -58,7 +58,7 @@ and `DATASET` ( ["samm" | "cas(me)^2"] )  in [pipeline.sh](https://github.com/xj
 $ bash pipeline.sh
 ```
 
-We also provide ckpts, logs, etc. to reproduce the results in the paper, please download []().
+**We also provide ckpts, logs, etc.** to reproduce the results in the paper, please download [ckpt.tar.gz](https://pan.baidu.com/s/1U-LEYH_fGOwgeToJ2Abhlw?pwd=5kan).
 ## Citation
 If you feel this project helpful to your research, please cite our work.
 ```
