@@ -3,7 +3,7 @@ import torch.nn as nn
 import os
 import numpy as np
 from datasets import LOSO_DATASET
-from model import PEM
+from model import AUwGCN
 from torch.utils.tensorboard import SummaryWriter
 from utils.train_utils import configure_optimizers
 from utils.loss_func import _probability_loss, MultiCEFocalLoss_New
@@ -67,7 +67,6 @@ def train(opt, data_loader, model, optimizer, epoch, device, writer):
         
         # forward pass
         b, t, n, c = feature.shape
-        #feature = feature.reshape(b, t, -1).permute(0, 2, 1).contiguous()
         feature = feature.to(device)
 
         micro_apex_score = micro_apex_score.to(device)
@@ -127,8 +126,6 @@ def train(opt, data_loader, model, optimizer, epoch, device, writer):
         # update losses
         loss_am.update(loss.detach())
         writer.add_scalar("Loss/train", loss, epoch)
-        # if n_iter == len(data_loader)-1:      checking why loss not decrease at all
-        #     print(logits.data[:5,:5])
     results = "[Epoch {0:03d}]\tLoss {1:.5f}(train)\n".format(
             epoch, loss_am.avg())
     print(results)
@@ -191,7 +188,7 @@ if __name__ == '__main__':
         
     # prep model
     device = opt['device'] if torch.cuda.is_available() else 'cpu'
-    model = PEM(opt)
+    model = AUwGCN(opt)
     model = model.to(device)
     
     

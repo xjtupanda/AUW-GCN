@@ -1,6 +1,6 @@
 import torch
 import opts
-from model import PEM
+from model import AUwGCN
 from datasets import LOSO_DATASET
 import os
 import yaml
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     
     # define and load model
     device = opt['device'] if torch.cuda.is_available() else 'cpu'
-    model = PEM(opt)
+    model = AUwGCN(opt)
     model = model.to(device)
     
     # evaluate each ckpt's model and generate proposals
