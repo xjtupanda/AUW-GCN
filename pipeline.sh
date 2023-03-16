@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 export CUDA_VISIBLE_DEVICES=2
 
+# Please comment and uncomment the corresponding part to train and evaluate on 
+# different datasets. [CASME | SAMM]
+
 # for CASME
 
 # SUB_LIST=( casme_015 casme_016 casme_019 casme_020 casme_021 casme_022 casme_023 casme_024 \
@@ -21,8 +24,9 @@ DATASET="samm"
 for i in ${SUB_LIST[@]}
 do     
     echo "************ Currently running subject: ${i} ************"
-    python train.py --dataset $DATASET --output $OUTPUT --subject ${i}
-    python eval.py --dataset $DATASET --output $OUTPUT --subject ${i}
+    # comment the line below if evaluating on available ckpts.
+    python train.py --dataset $DATASET --output $OUTPUT --subject ${i}  # for training
+    python eval.py --dataset $DATASET --output $OUTPUT --subject ${i}   # for evaluation
 done
 
 #output final metrics

@@ -20,7 +20,6 @@ class GraphConvolution(nn.Module):
         self.in_features = in_features
         self.out_features = out_features
         self.weight = Parameter(torch.Tensor(in_features, out_features))
-        #self.adj = Parameter(torch.Tensor(12, 12))
         if bias:
             self.bias = Parameter(torch.Tensor(out_features))
         else:
@@ -36,8 +35,6 @@ class GraphConvolution(nn.Module):
         if self.bias is not None:
             self.bias.data.uniform_(-stdv, stdv)
         
-        # stdv = 1. / math.sqrt(self.adj.size(1))
-        # self.adj.data.uniform_(-stdv, stdv)
 
     def forward(self, input):
         b, n, c = input.shape
@@ -84,7 +81,7 @@ class GCN(nn.Module):
         # x = F.dropout(x, self.dropout, training=self.training)
         return x
     
-class PEM(torch.nn.Module):
+class AUwGCN(torch.nn.Module):
     def __init__(self, opt):
         super().__init__()
         mat_path = os.path.join(

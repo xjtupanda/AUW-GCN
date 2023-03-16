@@ -23,13 +23,9 @@ def calculate_proposal_with_score(opt, array_score_start, array_score_end,
         right_max_dis = opt['micro_right_max_dis']
         min_len = opt['micro_min']
         max_len = opt['micro_max']
-        # STEP = int(opt["RECEPTIVE_FILED"] // 2)  # int(opt["micro_average_len"]*3/2)  == 7
-        # EX_MIN = int(opt["micro_min"] // 2)                                           == 2
+        
         apex_score_threshold = opt["micro_apex_score_threshold"]
     elif exp == 1:      # macro-expression
-        #return ret # for demo. only display ME
-        # STEP = int(opt["macro_average_len"] // 2)  # int(opt["micro_average_len"]*3/2)
-        # EX_MIN = int(opt["macro_min"] // 2)
         left_min_dis = opt['macro_left_min_dis']
         left_max_dis = opt['macro_left_max_dis']
         right_min_dis = opt['macro_right_min_dis']
@@ -91,7 +87,7 @@ def calculate_proposal_with_score(opt, array_score_start, array_score_end,
             ap_score = array_score_apex[x_index, apex_index]
             # col_name = ["video_name", "start_frame", "end_frame", "start_socre",
             #     "end_score", "apex_score", "type_idx"]
-            ret.append([_vid_name, st, ed, st_score, ed_score, ap_score, exp]) # final score = s*ap*ed
+            ret.append([_vid_name, st, ed, st_score, ed_score, ap_score, exp]) # final score = st*ap*ed
     
     if len(ret) > 0:
         ret = np.stack(ret, axis=0)
@@ -106,8 +102,7 @@ def eval_single_epoch(opt, model, dataloader, epoch, device):
     for (feature, offset, vid_name) in dataloader:
         feature = feature.to(device)
         
-        # align with training, orig. approach is to use the complete feature without segmentation though.
-        # TODO: use complete feature as orig.
+        
         STEP = int(opt["RECEPTIVE_FILED"] // 2)
 
         output_probability = model(feature)

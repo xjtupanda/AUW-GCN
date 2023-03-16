@@ -185,13 +185,10 @@ class LOSO_DATASET(data.Dataset):
                 npz_path_list.sort()
                 for npz_path in npz_path_list:
                     if self._has_expression(npz_path):
-                    # if self._has_micro_expression(npz_path):
                         expression_feat_file_path_list.append(npz_path)
                     else:
                         nature_feat_file_path_list.append(npz_path)
         elif self._split == "test":
-            # feat_file_path_list += glob.glob(
-            #     os.path.join(feat_dir_root, self._subject, "*.npz"))
             expression_feat_file_path_list = glob.glob(
                 os.path.join(feat_dir_root, self._subject, "*.npz"))
         random.seed(42)
@@ -207,21 +204,12 @@ if __name__ == "__main__":
         opt = yaml.safe_load(f)[dataset]
     subject_list = opt['subject_list']
     set_seed(seed=42)
-    # train_dataset = LOSO_DATASET(opt, 'train', subject_list[0])
-    # train_dataset[0]
-    # train_loader = torch.utils.data.DataLoader(
-    #     train_dataset, batch_size=opt['batch_size'],
-    #     shuffle=False, num_workers=0)
     
     test_dataset = LOSO_DATASET(opt, 'test', subject_list[0])
     test_dataset[0]
     test_loader = torch.utils.data.DataLoader(
         test_dataset, batch_size=8,
         shuffle=False, num_workers=0)
-    # for (feature, micro_apex_score, macro_apex_score,
-    #                 micro_action_score, macro_action_score,
-    #                 micro_start_end_label, macro_start_end_label) in train_loader:
-    #     print(micro_apex_score)
 
     for (feature, offset, vid_name) in test_loader:
         print(feature.shape)
