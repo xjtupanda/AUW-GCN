@@ -1,8 +1,8 @@
-dataset: "samm" #"cross" # "cas(me)^3" 
+dataset: "samm" # "cas(me)^2" 
 
 cas(me)^2:
   dataset: "cas(me)^2"
-  mode: "abfcm_iou_mul_process" #"abfcm_output_mul_process" #"abfcm_final_result" #"abfcm_train_mul_process" #"abfcm_nms_mul_process" 
+  # dataset statistics & training configuration
   RATIO_SCALE: 1
   SEGMENT_LENTH: 256
   RECEPTIVE_FILED: 15
@@ -15,7 +15,6 @@ cas(me)^2:
   macro_max: 90
   macro_min: 15
   epoch_begin: 15
-  #nms_top_K: 5
   nms_top_K_micro: 5
   nms_top_K_macro: 5
 
@@ -30,7 +29,7 @@ cas(me)^2:
   macro_right_max_dis: 29
 
   project_root: "./"
-  feature_root: "/data/xjtupanda/experiments/Detection/ME_spotting/archive/dataset/12points_orig/features/cas(me)^2/feature"
+  feature_root: ~
   segment_feat_root: "/data/xjtupanda/experiments/Detection/ME_spotting/archive/dataset/12points_orig/features/cas(me)^2/feature_segment"
   model_save_root: ~
   output_dir_name: ~
@@ -72,7 +71,6 @@ cas(me)^2:
 
 samm:
   dataset: "samm"
-  mode: "abfcm_output_mul_process" #"abfcm_iou_mul_process" #"abfcm_final_result" #"abfcm_train_mul_process" #"abfcm_nms_mul_process" 
   RATIO_SCALE: 1
   SEGMENT_LENTH: 256
   RECEPTIVE_FILED: 15
@@ -86,8 +84,6 @@ samm:
   micro_max: 13
   micro_min: 4
   epoch_begin: 10
-  # M: 54
-  #nms_top_K: 5 # 100
   nms_top_K_micro: 5
   nms_top_K_macro: 6
 
@@ -102,7 +98,7 @@ samm:
   macro_right_max_dis: 27
 
   project_root: "./"
-  feature_root: "/data/xjtupanda/experiments/Detection/ME_spotting/archive/dataset/12points_orig/features/samm_25/feature_25"
+  feature_root: ~
   segment_feat_root: "/data/xjtupanda/experiments/Detection/ME_spotting/archive/dataset/12points_orig/features/samm_25/feature_segment_25"
   model_save_root: ~
   output_dir_name: ~
