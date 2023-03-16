@@ -25,7 +25,7 @@ for i in ${SUB_LIST[@]}
 do     
     echo "************ Currently running subject: ${i} ************"
     # comment the line below if evaluating on available ckpts.
-    #python train.py --dataset $DATASET --output $OUTPUT --subject ${i}  # for training
+    python train.py --dataset $DATASET --output $OUTPUT --subject ${i}  # for training
     python eval.py --dataset $DATASET --output $OUTPUT --subject ${i}   # for evaluation
 done
 
