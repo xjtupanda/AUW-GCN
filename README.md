@@ -60,9 +60,13 @@ $ bash pipeline.sh
 
 **We also provide ckpts, logs, etc.** to reproduce the results in the paper, please download [ckpt.tar.gz](https://pan.baidu.com/s/1U-LEYH_fGOwgeToJ2Abhlw?pwd=5kan).
 ## Citation
-If you feel this project helpful to your research, please cite our work: https://arxiv.org/pdf/2303.09114.pdf
+If you feel this project helpful to your research, please cite our work.
 ```
-
+@inproceedings{Yin2023AUawareGC,
+  title={AU-aware graph convolutional network for Macro- and Micro-expression spotting},
+  author={Shukang Yin and Shiwei Wu and Tong Xu and Shifeng Liu and Sirui Zhao and Enhong Chen},
+  year={2023}
+}
 ```
 
 ##### Please email me at xjtupanda@mail.ustc.edu.cn if you have any inquiries or issues.
