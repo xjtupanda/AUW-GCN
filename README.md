@@ -62,9 +62,10 @@ $ bash pipeline.sh
 ## Citation
 If you feel this project helpful to your research, please cite our work. (To be updated when published on ICME.)
 ```
-@inproceedings{Yin2023AUawareGC,
-  title={AU-aware graph convolutional network for Macro- and Micro-expression spotting},
-  author={Shukang Yin and Shiwei Wu and Tong Xu and Shifeng Liu and Sirui Zhao and Enhong Chen},
+@article{yin2023aware,
+  title={AU-aware graph convolutional network for Macro-and Micro-expression spotting},
+  author={Yin, Shukang and Wu, Shiwei and Xu, Tong and Liu, Shifeng and Zhao, Sirui and Chen, Enhong},
+  journal={arXiv preprint arXiv:2303.09114},
   year={2023}
 }
 ```
