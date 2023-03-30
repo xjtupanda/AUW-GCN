@@ -61,8 +61,8 @@ def update_mat(mat, AU_list, AU_dict):
                mat = update_double(mat, AU_list[idx], AU_list[jdx], AU_dict)
     return mat
 
-#label_path = '/data/xjtupanda/experiments/Detection/ME_spotting/SoftNet-SpotME-main/CASME_sq/label_final.csv'
-label_path = '/data/xjtupanda/experiments/Detection/ME_spotting/SoftNet-SpotME-main/SAMMLV/label_final_new.csv'
+#label_path = '../info_csv/cas(me)_new.csv'
+label_path = '../info_csv/samm_new_25.csv'
 df = pd.read_csv(label_path, dtype={'au':'string'})
 # # make expression-type specific
 # df = df[df['type'] == 'macro-expression']
