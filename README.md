@@ -59,6 +59,9 @@ $ bash pipeline.sh
 ```
 
 **We also provide ckpts, logs, etc.** to reproduce the results in the paper, please download [ckpt.tar.gz](https://pan.baidu.com/s/1U-LEYH_fGOwgeToJ2Abhlw?pwd=5kan).
+
+## Designing your own adjacency matrix (Optional)
+Check [make_coc_matrix.py](./utils/make_coc_matrix.py).
 ## Citation
 If you feel this project helpful to your research, please cite our work. (To be updated when published on ICME.)
 ```
