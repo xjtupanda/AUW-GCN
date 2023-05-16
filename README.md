@@ -62,6 +62,14 @@ $ bash pipeline.sh
 
 ## Designing your own adjacency matrix (Optional)
 Check [make_coc_matrix.py](./utils/make_coc_matrix.py).
+
+## Feature Extraction (Optional)
+Check `./feature_extraction`
+1. Download model checkpoints [checkpoint.zip](https://pan.baidu.com/s/1Xx-RjN0-OlwzGoX1n5MXnw?pwd=3akj), extract it to the `feature_extraction` dir and move the 'Resnet50_Final.pth' file to the './feature_extraction/retinaface'
+2. Set path and other settings in [config.yaml](./feature_extraction/config.yaml)
+3. Run [new_all.py](./feature_extraction/new_all.py)
+
+**Special credit to [whcold](https://github.com/wenhaocold)** as this part of the code is mainly wrritten by him.
 ## Citation
 If you feel this project helpful to your research, please cite our work. (To be updated when published on ICME.)
 ```
