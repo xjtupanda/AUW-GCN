@@ -1,3 +1,0 @@
-[submodule "feature_extraction/retinaface"]
-	path = feature_extraction/retinaface
-	url = https://github.com/biubug6/Pytorch_Retinaface.git
