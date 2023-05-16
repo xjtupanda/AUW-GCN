@@ -1,0 +1,63 @@
+dataset: "cas(me)^2"  # "cross" #"samm_25" #"cas(me)^2"    
+
+cas(me)^2:
+  dataset: "cas(me)^2"
+  # original_root_path: "/home/whcold/Datas/public_micro_dataset/samm/samm_long_original"
+  # simpled_root_path:  "/home/whcold/Datas/public_micro_dataset/samm_25/original_25"
+  cropped_root_path:  "/data/xjtupanda/my_dataset/ME_dataset/orig_data/casme/CAS(ME)2_longVideoFaceCropped/longVideoFaceCropped"
+  optflow_root_path:  "/data/xjtupanda/my_dataset/ME_dataset/orig_data/optical_flow/casme"
+  feature_root_path:  "/data/xjtupanda/my_dataset/ME_dataset/roi_feats/casme"
+  # feature_segment_root_path:  "/home/whcold/Datas/public_micro_dataset/cas(me)^2/feature_segment"
+  # original_anno_csv_path: "./samm_new.csv" 
+  anno_csv_path: "./cas(me)_new.csv"
+  # SAMPLING_RATIO: 8
+  # CROPPED_SIZE: 500
+  SEGMENT_LENGTH: 256
+  RECEPTIVE_FILED: 15 # should be odd
+  
+samm_25:
+  dataset: "samm_25"
+  original_root_path: "/home/whcold/Datas/public_micro_dataset/samm/samm_long_original"
+  simpled_root_path:  "/home/whcold/Datas/public_micro_dataset/samm_25/original_25"
+  cropped_root_path:  "/home/whcold/Datas/public_micro_dataset/samm_25/cropped_25"
+  optflow_root_path:  "/home/whcold/Datas/public_micro_dataset/samm_25/optflow_25"
+  feature_root_path:  "/home/whcold/Datas/public_micro_dataset/samm_25/feature_25"
+  feature_segment_root_path:  "/home/whcold/Datas/public_micro_dataset/samm_25/feature_segment_25"
+  original_anno_csv_path: "./samm_new.csv" 
+  anno_csv_path: "./samm_new_25.csv"
+  SAMPLING_RATIO: 8
+  CROPPED_SIZE: 500
+  SEGMENT_LENGTH: 256
+  RECEPTIVE_FILED: 15 # should be odd
+
+cross:
+  dataset: "cross"
+  feature_root_path:  "/home/whcold/Datas/public_micro_dataset/cross/feature_split/train"
+  feature_segment_root_path:  "/home/whcold/Datas/public_micro_dataset/cross/feature_segment"
+  # original_anno_csv_path: "./samm_new.csv" 
+  anno_csv_path: "./cross.csv"
+  # SAMPLING_RATIO: 8
+  # CROPPED_SIZE: 500
+  SEGMENT_LENGTH: 256
+  RECEPTIVE_FILED: 15 # should be odd
+
+casme2:
+  dataset: "casme2"
+  original_root_path: "/home/ymzhang21/dataset/public_micro_dataset/casme2/CASME2_RAW_selected"
+  simpled_root_path:  "/home/ymzhang21/dataset/public_micro_dataset/casme2/sampled_apex"
+  cropped_root_path:  "/home/ymzhang21/dataset/public_micro_dataset/casme2/cropped_apex"
+  optflow_root_path:  "/home/ymzhang21/dataset/public_micro_dataset/casme2/optflow_apex"
+  feature_root_path:  "/home/ymzhang21/dataset/public_micro_dataset/casme2/feature_apex"
+  anno_csv_path: "/home/ymzhang21/dataset/public_micro_dataset/casme2/casme2.csv"
+  SAMPLING_RATIO: 8
+  CROPPED_SIZE: 500
+  SEGMENT_LENGTH: 256
+  RECEPTIVE_FILED: 15 # should be odd
+
+oulu:
+  dataset: "oulu"
+  original_root_path: "/home/whcold/Datas/oulu/new/Oulu_CASIA_NIR_VIS"
+  cropped_root_path:  "/home/whcold/Datas/oulu/cropped"
+  optflow_root_path:  "/home/whcold/Datas/oulu/optflow"
+  feature_root_path:  "/home/whcold/Datas/oulu/feature"
+  CROPPED_SIZE: 300
