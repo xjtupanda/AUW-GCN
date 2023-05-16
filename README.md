@@ -64,12 +64,12 @@ $ bash pipeline.sh
 Check [make_coc_matrix.py](./utils/make_coc_matrix.py).
 
 ## Feature Extraction (Optional)
-This part of the code is in `./feature_extraction`.
+This part of the code is in `./feature_extraction`
 1. Clone submodule 'retinaface':
 ```shell
 git submodule update --init --recursive
 ```
-2. Download model checkpoints [checkpoint.zip](https://pan.baidu.com/s/1Xx-RjN0-OlwzGoX1n5MXnw?pwd=3akj), extract it to the `feature_extraction` dir and move the `feature_extraction/checkpoint/Resnet50_Final.pth` file to the `feature_extraction/retinaface`
+2. Download model checkpoints [checkpoint.zip](https://pan.baidu.com/s/1Xx-RjN0-OlwzGoX1n5MXnw?pwd=3akj), extract it to the `feature_extraction` dir and move the `feature_extraction/checkpoint/Resnet50_Final.pth` file to the `feature_extraction/retinaface` dir
 3. Set path and other settings in [config.yaml](./feature_extraction/config.yaml)
 4. Run [new_all.py](./feature_extraction/new_all.py)
 
