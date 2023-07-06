@@ -4,7 +4,7 @@ certifi==2022.12.7
 charset-normalizer==3.1.0
 google-auth==2.16.2
 google-auth-oauthlib==0.4.6
-grpcio==1.51.3
+grpcio==1.53.0
 idna==3.4
 importlib-metadata==6.0.0
 Markdown==3.4.1
