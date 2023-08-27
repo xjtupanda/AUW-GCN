@@ -1,6 +1,6 @@
 # AUW-GCN-for-ME-Spotting
-PyTorch implementation for the paper "AU-aware graph convolutional network for Macro- and Micro-expression spotting" (**ICME 2023**, 
-Poster): [IEEE version (Coming soon)](),  [arXiv version](https://arxiv.org/pdf/2303.09114.pdf).
+PyTorch implementation for the paper "AU-aware graph convolutional network for Macro- and Micro-expression spotting" (**ICME-2023**, 
+Poster): [IEEE version](https://ieeexplore.ieee.org/document/10219900),  [arXiv version](https://arxiv.org/pdf/2303.09114.pdf).
 
 ![model_overview](./figures/framework.png)
 
