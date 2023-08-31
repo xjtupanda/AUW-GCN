@@ -71,13 +71,15 @@ This part of the code is in `./feature_extraction`
 
 **Special credit to [whcold](https://github.com/wenhaocold)** as this part of the code is mainly wrritten by him.
 ## Citation
-If you feel this project helpful to your research, please cite our work. (To be updated when published on ICME.)
+If you feel this project helpful to your research, please cite our work.
 ```
-@article{yin2023aware,
-  title={AU-aware graph convolutional network for Macro-and Micro-expression spotting},
+@inproceedings{yin2023aware,
+  title={AU-aware graph convolutional network for Macro- and Micro-expression spotting},
   author={Yin, Shukang and Wu, Shiwei and Xu, Tong and Liu, Shifeng and Zhao, Sirui and Chen, Enhong},
-  journal={arXiv preprint arXiv:2303.09114},
-  year={2023}
+  booktitle={2023 IEEE International Conference on Multimedia and Expo (ICME)},
+  pages={228--233},
+  year={2023},
+  organization={IEEE}
 }
 ```
 
