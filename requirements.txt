@@ -17,7 +17,7 @@ nvidia-cudnn-cu11==8.5.0.96
 oauthlib==3.2.2
 packaging==23.0
 pandas==1.5.3
-Pillow==9.4.0
+Pillow==10.0.1
 protobuf==3.20.3
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
