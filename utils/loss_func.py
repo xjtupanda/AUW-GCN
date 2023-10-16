@@ -19,7 +19,8 @@ class MultiCEFocalLoss_New(torch.nn.Module):
         class_mask = torch.nn.functional.one_hot(
             target, self.class_num).view(-1, self.class_num)
         ids = target.view(-1, 1)
-        alpha = self.alpha[ids.data.view(-1)].view(-1, 1)
+        alpha = self.alpha.clone().to(ids.device)
+        alpha = alpha[ids.view(-1)].view(-1, 1)
         alpha = alpha.to(predict.device)
 
         positive_class_mask_indices = torch.nonzero(

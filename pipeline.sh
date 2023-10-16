@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-export CUDA_VISIBLE_DEVICES=2
+export CUDA_VISIBLE_DEVICES=0
 
 # Please comment and uncomment the corresponding part to train and evaluate on 
 # different datasets. [CASME | SAMM]
@@ -18,7 +18,7 @@ SUB_LIST=( samm_007 samm_006 samm_008 samm_009 samm_010 samm_011 samm_012 samm_0
 samm_015 samm_016 samm_017 samm_018 samm_019 samm_020 samm_021 samm_022 samm_023 samm_024 \
 samm_025 samm_026 samm_028 samm_030 samm_031 samm_032 samm_033 samm_034 samm_036 samm_035 \
 samm_037 )
-OUTPUT="./output/samm"
+OUTPUT="./tmp_output/samm"
 DATASET="samm"
 
 for i in ${SUB_LIST[@]}
