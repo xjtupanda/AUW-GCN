@@ -83,4 +83,4 @@ If you feel this project helpful to your research, please cite our work.
 }
 ```
 
-##### Please email me at xjtupanda@mail.ustc.edu.cn if you have any inquiries or issues.
+##### You may open an issue or email me at xjtupanda@mail.ustc.edu.cn if you have any inquiries or issues.
