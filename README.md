@@ -69,7 +69,7 @@ This part of the code is in `./feature_extraction`
 2. Set path and other settings in [config.yaml](./feature_extraction/config.yaml)
 3. Run [new_all.py](./feature_extraction/new_all.py)
 
-**Special credit to [whcold](https://github.com/wenhaocold)** as this part of the code is mainly wrritten by him.
+**Special credit to [whcold](https://github.com/wenhaocold)** as this part of the code is mainly written by him.
 ## Citation
 If you feel this project helpful to your research, please cite our work.
 ```
