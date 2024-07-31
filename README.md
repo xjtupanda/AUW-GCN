@@ -60,7 +60,7 @@ $ bash pipeline.sh
 
 **We also provide ckpts, logs, etc.** to reproduce the results in the paper, please download [ckpt.tar.gz](https://pan.baidu.com/s/1U-LEYH_fGOwgeToJ2Abhlw?pwd=5kan).
 
-## Designing your own adjacency matrix (Optional)
+## Design your own adjacency matrix (Optional)
 Check [make_coc_matrix.py](./utils/make_coc_matrix.py).
 
 ## Feature Extraction (Optional)
@@ -71,7 +71,7 @@ This part of the code is in `./feature_extraction`
 
 **Special credit to [whcold](https://github.com/wenhaocold)** as this part of the code is mainly written by him.
 ## Citation
-If you feel this project helpful to your research, please cite our work.
+If you find this project helpful to your research, please cite our work.
 ```
 @inproceedings{yin2023aware,
   title={AU-aware graph convolutional network for Macro- and Micro-expression spotting},
