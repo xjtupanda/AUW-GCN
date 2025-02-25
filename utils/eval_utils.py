@@ -334,7 +334,7 @@ def calc_metrics(df, opt):
     
     tp = 0
     n = 0       # num of proposals
-    tp += len(df[df["tp"] == "True"])
+    tp += len(df[df["find"] == "True"])
     n += len(df)
         
     return tp, n
@@ -376,8 +376,8 @@ def calculate_epoch_metrics(opt):
         
         new_df = nms_df.groupby(['video_name', "type_idx"], group_keys=False).apply(
             lambda x: iou_for_find(x, opt)).reset_index(drop=True)
-        new_df = new_df.groupby(['video_name', "type_idx"], group_keys=False).apply(
-            lambda x: iou_for_tp(x, opt)).reset_index(drop=True)
+        # new_df = new_df.groupby(['video_name', "type_idx"], group_keys=False).apply(
+        #     lambda x: iou_for_tp(x, opt)).reset_index(drop=True)
         
         
         res = new_df.groupby(['type_idx'], group_keys=False).apply(
