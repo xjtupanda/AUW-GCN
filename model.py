@@ -143,8 +143,13 @@ if __name__ == "__main__":
         opt = yaml_config[dataset]
     
     x = torch.randn((16, 64, 12, 2))        # (b, t, n, c)
-    model = PEM(opt)
+    model = AUwGCN(opt)
     
+    # Calculate # params.
+    total_params = sum(p.numel() for p in model.parameters())
+    print(f"Number of parameters: {total_params/1e3:.2f} K")
+    
+    # Check output shape
     out = model(x)
-    print(out.shape)
+    print(f"Output shape: {out.shape}")
     
